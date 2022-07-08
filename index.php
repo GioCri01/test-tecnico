@@ -13,10 +13,12 @@
  }
 
 
- $sql = "CREATE TABLE airport(
+
+ $sql = "CREATE TABLE flight(
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    airport_name VARCHAR(30) NOT NULL ,
-    code VARCHAR(10) NOT NULL UNIQUE
+    code_departure VARCHAR(10) NOT NULL  ,
+    code_arrival VARCHAR(10) NOT NULL  ,
+    price DECIMAL(5,2) NOT NULL 
  )";
 
  if($conn->query($sql) === true){
