@@ -14,14 +14,20 @@
 
 
 
- $sql = "INSERT INTO airport(airport_name,code) VALUES
- ('Aereoporto di Milano Linate','AO12345'),
- ('Aereoporto di Roma','BA12345'),
- ('Aereoporto di Napoli','CO12345'),
- ('Aereoporto di Bari','DR12345'),
- ('Aereoporto di Genoa','SF12345'),
- ('Aereoporto di Torino','PP12345'),
- ('Aereoporto di Bergamo','NM12345')";
+ $sql = "INSERT INTO flight(code_departure,code_arrival,price) VALUES
+ ('BA12345','AO12345',30.00),
+ ('BA12345','AO12345',50.00),
+ ('BA12345','AO12345',250.00),
+ ('BA12345','AO12345',450.00),
+ ('AO12345','BA12345',50.00),
+ ('AO12345','BA12345',250.00),
+ ('AO12345','BA12345',150.00),
+ ('AO12345','BA12345',350.00),
+ ('CO12345','DR12345',50.00),
+ ('CO12345','DR12345',200.00),
+ ('CO12345','DR12345',150.00),
+ ('CO12345','DR12345',80.00)";
+ 
 
  if($conn->query($sql) === true){
     echo "inseriemnto records avvenuto";
