@@ -14,17 +14,19 @@
 
 
 
- $sql = "CREATE TABLE flight(
-    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    code_departure VARCHAR(10) NOT NULL  ,
-    code_arrival VARCHAR(10) NOT NULL  ,
-    price DECIMAL(5,2) NOT NULL 
- )";
+ $sql = "INSERT INTO airport(airport_name,code) VALUES
+ ('Aereoporto di Milano Linate','AO12345'),
+ ('Aereoporto di Roma','BA12345'),
+ ('Aereoporto di Napoli','CO12345'),
+ ('Aereoporto di Bari','DR12345'),
+ ('Aereoporto di Genoa','SF12345'),
+ ('Aereoporto di Torino','PP12345'),
+ ('Aereoporto di Bergamo','NM12345')";
 
  if($conn->query($sql) === true){
-    echo "tabella creata";
+    echo "inseriemnto records avvenuto";
  }else{
-    echo "errore creazione tabella" . $conn->error;
+    echo "errore inserimento" . $conn->error;
  }
 
 
